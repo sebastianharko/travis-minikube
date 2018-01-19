@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/LiliC/travis-minikube.svg?branch=master)](https://travis-ci.org/LiliC/travis-minikube)
+[![Build Status](https://travis-ci.org/sebastianharko/travis-minikube.svg?branch=master)](https://travis-ci.org/sebastianharko/travis-minikube)
 
 # travis-minikube
 
