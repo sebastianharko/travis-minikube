@@ -3,6 +3,7 @@ sudo: required
 # This moves Kubernetes specific config files.
 
 before_script:
+- export CHANGE_MINIKUBE_NONE_USER=true
 # Download kubectl, which is a requirement for using minikube.
 - curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.8.0/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
 # Download minikube.
@@ -15,6 +16,7 @@ before_script:
 
 script:
 # Create example Redis deployment on Kubernetes.
+- echo $CHANGE_MINIKUBE_NONE_USER
 - kubectl cluster-info 
 - kubectl run travis-example --image=redis
 - kubectl get deployment
