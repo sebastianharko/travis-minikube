@@ -16,7 +16,6 @@ before_script:
 
 script:
 # Create example Redis deployment on Kubernetes.
-- echo $CHANGE_MINIKUBE_NONE_USER
 - kubectl cluster-info 
 - kubectl run travis-example --image=redis
 - kubectl get deployment
