@@ -27,6 +27,7 @@ before_script:
 script:
 - echo TRAVIS_BUILD_NUMBER is $TRAVIS_BUILD_NUMBER
 - echo TRAVIS_JOB_NUMBER is $TRAVIS_JOB_NUMBER
+- echo TRAVIS_JOB_ID is $TRAVIS_JOB_ID
 # Create example Redis deployment on Kubernetes.
 - kubectl cluster-info 
 - kubectl run travis-example --image=redis
