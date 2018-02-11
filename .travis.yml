@@ -1,5 +1,15 @@
 sudo: required
 
+language: scala
+
+scala:
+  - "2.12.2"
+  - "2.11.11"
+
+jdk:
+  - oraclejdk8
+
+
 # This moves Kubernetes specific config files.
 
 before_script:
@@ -15,6 +25,8 @@ before_script:
 - JSONPATH='{range .items[*]}{@.metadata.name}:{range @.status.conditions[*]}{@.type}={@.status};{end}{end}'; until kubectl get nodes -o jsonpath="$JSONPATH" 2>&1 | grep -q "Ready=True"; do sleep 1; done
 
 script:
+- echo TRAVIS_BUILD_NUMBER is $TRAVIS_BUILD_NUMBER
+- echo TRAVIS_JOB_NUMBER is $TRAVIS_JOB_NUMBER
 # Create example Redis deployment on Kubernetes.
 - kubectl cluster-info 
 - kubectl run travis-example --image=redis
