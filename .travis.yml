@@ -25,3 +25,5 @@ before_script:
 
 script:
 - echo TRAVIS_JOB_NUMBER is $TRAVIS_JOB_NUMBER
+- docker build -t SomeTag .
+- docker images
