@@ -25,7 +25,7 @@ before_script:
 
 script:
 - echo TRAVIS_JOB_NUMBER is $TRAVIS_JOB_NUMBER
-- docker build -t somename:1.0 .
+- docker build -t s/somename:1.0 .
 - docker images
 - kubectl create -f k.yml
 - sleep 15
