@@ -11,4 +11,4 @@ spec:
     spec:
       containers:
       - name: somename
-        image: somename:latest
+        image: somename:1.0
