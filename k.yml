@@ -10,6 +10,6 @@ spec:
         somekey: somevalue
     spec:
       containers:
-      - name: somename
-        image: s/somename:1.0
+      - name: golang-ping-pong
+        image: sebastianharko/golang-ping-pong:1.0
         imagePullPolicy: Always
