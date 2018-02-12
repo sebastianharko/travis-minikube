@@ -26,6 +26,6 @@ before_script:
 script:
 - echo TRAVIS_JOB_NUMBER is $TRAVIS_JOB_NUMBER
 - kubectl create -f k.yml
-- sleep 15
+- sleep 45
 - kubectl get deployments
 - kubectl get pods
