@@ -11,5 +11,5 @@ spec:
     spec:
       containers:
       - name: golang-ping-pong
-        image: sebastianharko/golang-ping-pong:1.0
+        image: sebastianharko/someimage:latest
         imagePullPolicy: Always
