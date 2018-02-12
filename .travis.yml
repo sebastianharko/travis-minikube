@@ -27,3 +27,7 @@ script:
 - echo TRAVIS_JOB_NUMBER is $TRAVIS_JOB_NUMBER
 - docker build -t somename .
 - docker images
+- kubectl create -f k.yml
+- sleep 15
+- kubectl get deployments
+- kubectl get pods
