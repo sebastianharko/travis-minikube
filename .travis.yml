@@ -25,6 +25,9 @@ before_script:
 
 script:
 - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+- docker build -t someimage .
+- docker tag someimage sebastianharko/someimage
+- docker push sebastianharko/someimage
 - echo TRAVIS_JOB_NUMBER is $TRAVIS_JOB_NUMBER
 - kubectl create -f k.yml
 - sleep 45
