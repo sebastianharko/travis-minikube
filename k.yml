@@ -11,5 +11,5 @@ spec:
     spec:
       containers:
       - name: somename
-        image: somename:1.0
+        image: s/somename:1.0
         imagePullPolicy: Always
