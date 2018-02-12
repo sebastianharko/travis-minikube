@@ -7,7 +7,7 @@ spec:
   template:
     metadata:
       labels:
-        key: value
+        somekey: somevalue
     spec:
       containers:
       - name: somename
