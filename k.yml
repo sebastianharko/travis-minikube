@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: some-deployment
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: somename
+        image: somename:latest
