@@ -5,6 +5,9 @@ metadata:
 spec:
   replicas: 3
   template:
+    metadata:
+      labels:
+        key: value
     spec:
       containers:
       - name: somename
