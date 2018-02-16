@@ -30,9 +30,10 @@ script:
 - docker push sebastianharko/someimage
 - echo TRAVIS_JOB_NUMBER is $TRAVIS_JOB_NUMBER
 - kubectl create -f k.yml
-- sleep 45
 - kubectl get deployments
 - kubectl get pods
+- chmod +x x.sh
+- ./x.sh
 
 env:
   global:
